@@ -14,3 +14,19 @@
 @media(max-width:850px){.nav-links{gap:18px}.hero-layout{grid-template-columns:1fr  .8fr}.hero-art{transform:scale(.85)}.intro-grid,.statement-inner{grid-template-columns:.5fr 1.5fr;gap:25px}.contact-content{margin-left:12%}}
 @media(max-width:680px){.container{width:min(100% - 36px,520px)}.site-header{height:70px}.menu-toggle{display:flex;width:42px;height:42px;flex-direction:column;justify-content:center;align-items:center;gap:6px;background:transparent;border:1px solid var(--line)}.menu-toggle span{width:17px;height:1px;background:var(--green);transition:transform .2s}.menu-toggle[aria-expanded=true] span:first-child{transform:translateY(3.5px) rotate(45deg)}.menu-toggle[aria-expanded=true] span:last-child{transform:translateY(-3.5px) rotate(-45deg)}.nav-links{display:none;position:absolute;top:69px;left:0;right:0;background:#0b100c;border-bottom:1px solid var(--line);padding:22px 24px 25px;align-items:stretch;flex-direction:column;gap:19px}.nav-links.open{display:flex}.nav-cta{text-align:center}.hero{padding:75px 0 25px;min-height:auto}.hero-layout{grid-template-columns:1fr;gap:0}.hero-art{height:320px;transform:scale(.8);margin:-5px -25px}.hero-content h1{font-size:clamp(48px,13vw,68px)}.hero-lead{font-size:14px}.hero-footnote{margin-top:42px}.hero-bottom{font-size:7px;letter-spacing:.1em}.hero-bottom span:nth-child(2){display:none}.section-pad{padding:80px 0}.intro-grid,.statement-inner{grid-template-columns:1fr;gap:27px}.intro-copy h2{font-size:37px}.section-heading{display:block}.section-heading>p{margin-top:22px}.cards-grid{grid-template-columns:1fr}.approach-card{min-height:260px}.statement-content h2{font-size:43px}.statement-signature{grid-column:1}.contact{padding-top:5px}.contact-panel{padding:38px 25px;min-height:440px}.contact-content{margin:35px 0 0}.contact-content h2{font-size:43px}.contact-orb{left:160px;top:-170px;width:260px;height:260px}.contact-watermark{font-size:120px;right:12px}.footer-inner{flex-wrap:wrap}.footer-inner>span:nth-child(2){order:3;width:100%}.site-footer{margin-top:65px}.brand-name{font-size:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Pensamento jurídico */
+.thinkers{background:#090e0a;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.thinkers-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:45px}
+.thinker-card{min-height:310px;padding:27px 25px 24px;background:linear-gradient(145deg,rgba(22,32,23,.92),rgba(11,16,12,.96));border:1px solid var(--line);position:relative;display:flex;flex-direction:column;transition:transform .3s,border-color .3s}
+.thinker-card:hover{transform:translateY(-6px);border-color:rgba(163,243,107,.48)}
+.thinker-featured{background:linear-gradient(145deg,rgba(37,58,34,.72),rgba(11,16,12,.96));border-color:rgba(163,243,107,.3)}
+.thinker-number{font-size:9px;letter-spacing:.18em;color:var(--green);font-weight:700}
+.thinker-quote{font:90px Georgia;color:rgba(163,243,107,.28);line-height:.95;margin-top:28px;height:55px}
+.thinker-card blockquote{font:600 20px/1.45 var(--display);letter-spacing:-.035em;color:var(--white);flex:1}
+.thinker-author{display:flex;flex-direction:column;gap:4px;margin-top:25px;padding-top:17px;border-top:1px solid var(--line)}
+.thinker-author b{font-size:12px;color:var(--green);font-weight:700}
+.thinker-author span{font-size:10px;color:#849087}
+.thinkers-note{margin-top:17px;color:#69766c;font-size:10px}
+@media(max-width:850px){.thinkers-grid{grid-template-columns:1fr 1fr}.thinker-card:last-child{grid-column:1/-1;min-height:250px}}
+@media(max-width:680px){.thinkers-grid{grid-template-columns:1fr}.thinker-card:last-child{grid-column:auto}.thinker-card{min-height:270px}.thinker-card blockquote{font-size:19px}}
