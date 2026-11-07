@@ -30,3 +30,26 @@
 .thinkers-note{margin-top:17px;color:#69766c;font-size:10px}
 @media(max-width:850px){.thinkers-grid{grid-template-columns:1fr 1fr}.thinker-card:last-child{grid-column:1/-1;min-height:250px}}
 @media(max-width:680px){.thinkers-grid{grid-template-columns:1fr}.thinker-card:last-child{grid-column:auto}.thinker-card{min-height:270px}.thinker-card blockquote{font-size:19px}}
+
+
+/* Layout compacto da página e cards de projetos */
+.hero{min-height:570px;padding:55px 0 25px}
+.hero-art{height:390px}
+.section-pad{padding:78px 0}
+.thinkers{background:#090e0a;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.thinkers-grid{margin-top:30px}
+.thinker-card{min-height:245px}
+.thinker-quote{font:600 46px var(--display);height:52px;margin-top:22px;color:var(--green)}
+.thinker-card blockquote{font-size:23px;flex:0 0 auto}
+.project-description{font-size:12px;line-height:1.7;color:#98a49a;margin-top:12px;max-width:290px}
+.contact{padding-top:20px;padding-bottom:65px}
+.contact-panel{min-height:340px}
+.site-footer{margin-top:20px}
+@media(max-width:680px){
+  .hero{padding-top:55px}
+  .hero-art{height:270px}
+  .section-pad{padding:58px 0}
+  .thinker-card{min-height:220px}
+  .contact{padding-top:5px;padding-bottom:45px}
+  .contact-panel{min-height:370px}
+}
