@@ -26,7 +26,7 @@
 
         <div class="nav-actions">
           <a href="#contato" class="btn btn-secondary">Fale conosco</a>
-          <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+          <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
         </div>
       </div>
     </header>
@@ -180,7 +180,7 @@
           </div>
 
           <div class="services-grid">
-            <article class="service-card" id="investimento">
+            <article class="service-card">
               <div class="service-icon">📈</div>
               <h3>Investimento</h3>
               <p>
@@ -190,7 +190,7 @@
               <a href="#contato">Saiba mais →</a>
             </article>
 
-            <article class="service-card" id="planejamento">
+            <article class="service-card">
               <div class="service-icon">💡</div>
               <h3>Planejamento</h3>
               <p>
@@ -209,6 +209,131 @@
               </p>
               <a href="#contato">Saiba mais →</a>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="investimento" class="planner-section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Dashboard de Planejamento Financeiro e Investimentos</h2>
+            <p>Projete o crescimento do patrimônio, acompanhe ativos e conecte cada decisão a uma meta de vida.</p>
+          </div>
+
+          <div class="finance-grid">
+            <div class="planner-card simulator-card">
+              <div class="planner-card-heading">
+                <div>
+                  <span class="card-kicker">SIMULADOR</span>
+                  <h3>Independência financeira</h3>
+                </div>
+                <span class="planner-symbol" aria-hidden="true">↗</span>
+              </div>
+              <p class="card-description">Ajuste os valores para visualizar um cenário de juros compostos ao longo do tempo.</p>
+
+              <div class="simulator-fields">
+                <label>Renda mensal futura na advocacia (R$)
+                  <input id="law-income" type="number" min="0" step="500" value="15000" inputmode="decimal">
+                </label>
+                <label>Patrimônio investido hoje (R$)
+                  <input id="current-capital" type="number" min="0" step="1000" value="50000" inputmode="decimal">
+                </label>
+                <label>Aporte mensal (R$)
+                  <input id="monthly-contribution" type="number" min="0" step="100" value="1500" inputmode="decimal">
+                </label>
+                <label>Rentabilidade anual estimada (%)
+                  <input id="annual-return" type="number" min="0" max="100" step="0.1" value="8" inputmode="decimal">
+                </label>
+                <label>Prazo em anos
+                  <input id="investment-years" type="number" min="1" max="80" step="1" value="20" inputmode="numeric">
+                </label>
+                <label>Meta de patrimônio (R$)
+                  <input id="target-assets" type="number" min="0" step="10000" value="1000000" inputmode="decimal">
+                </label>
+              </div>
+
+              <div class="projection-result" aria-live="polite">
+                <div>
+                  <span class="result-label">Patrimônio projetado</span>
+                  <strong id="projected-wealth">R$ 0</strong>
+                </div>
+                <div class="progress-track" role="progressbar" aria-label="Progresso em relação à meta patrimonial" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                  <span id="wealth-progress"></span>
+                </div>
+                <div class="projection-meta">
+                  <span id="wealth-progress-label">0% da meta</span>
+                  <span id="projection-summary">Renda futura: R$ 0/mês</span>
+                </div>
+              </div>
+              <p class="fine-print">Simulação ilustrativa com aportes mensais e taxa constante. Não representa garantia de retorno.</p>
+            </div>
+
+            <div class="planner-card assets-card">
+              <div class="planner-card-heading">
+                <div>
+                  <span class="card-kicker">ACOMPANHAMENTO</span>
+                  <h3>Gestão de ativos e metas</h3>
+                </div>
+                <span class="asset-total" id="asset-total">R$ 0</span>
+              </div>
+              <p class="card-description">Organize sua carteira por classe e associe cada ativo a um objetivo.</p>
+              <div class="asset-list" id="asset-list" aria-live="polite"></div>
+              <button type="button" class="btn btn-secondary add-asset" id="add-asset">+ Adicionar ativo</button>
+              <div class="goal-strip">
+                <span class="card-kicker">OBJETIVOS</span>
+                <div class="goal-tags">
+                  <span>Escritório</span><span>Imóvel</span><span>Viagens</span>
+                </div>
+                <p>Associe renda fixa, ações, FIIs ou previdência às suas metas de curto, médio e longo prazo.</p>
+              </div>
+              <p class="fine-print">Os dados deste painel ficam salvos somente neste navegador.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="planejamento" class="planner-section life-section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Planejamento de Vida e Hábitos</h2>
+            <p>Um Life Planner para equilibrar prazos do Direito, desenvolvimento profissional, saúde e objetivos pessoais.</p>
+          </div>
+
+          <div class="life-grid">
+            <div class="planner-card goals-card">
+              <div class="planner-card-heading">
+                <div>
+                  <span class="card-kicker">LIFE PLANNER</span>
+                  <h3>Metas anuais</h3>
+                </div>
+                <span class="planner-symbol" aria-hidden="true">◎</span>
+              </div>
+              <p class="card-description">Acompanhe metas de curto e longo prazo em diferentes áreas da vida.</p>
+              <div class="check-list" id="goal-checklist">
+                <label class="check-row"><input type="checkbox" data-planner-check="books"><span><strong>Leitura</strong><small>Livros a ler no ano</small></span></label>
+                <label class="check-row"><input type="checkbox" data-planner-check="postgrad"><span><strong>Desenvolvimento</strong><small>Curso ou pós-graduação</small></span></label>
+                <label class="check-row"><input type="checkbox" data-planner-check="revenue"><span><strong>Faturamento</strong><small>Meta profissional anual</small></span></label>
+                <label class="check-row"><input type="checkbox" data-planner-check="wellbeing"><span><strong>Qualidade de vida</strong><small>Tempo para saúde e descanso</small></span></label>
+              </div>
+            </div>
+
+            <div class="planner-card habits-card">
+              <div class="planner-card-heading">
+                <div>
+                  <span class="card-kicker">ROTINA &amp; ALTA PERFORMANCE</span>
+                  <h3>Hábitos de hoje</h3>
+                </div>
+                <span class="habit-date" id="habit-date"></span>
+              </div>
+              <p class="card-description">Pequenas ações para manter a rotina em dia, mesmo entre prazos e compromissos.</p>
+              <div class="check-list" id="habit-checklist">
+                <label class="check-row"><input type="checkbox" data-habit-check="deadlines"><span><strong>Revisar prazos e agenda</strong><small>Organizar as prioridades do dia</small></span></label>
+                <label class="check-row"><input type="checkbox" data-habit-check="health"><span><strong>Cuidar da saúde</strong><small>Movimento, pausa ou descanso</small></span></label>
+                <label class="check-row"><input type="checkbox" data-habit-check="learning"><span><strong>Estudar um pouco</strong><small>Avançar em uma meta de aprendizado</small></span></label>
+                <label class="check-row"><input type="checkbox" data-habit-check="investments"><span><strong>Conferir o plano financeiro</strong><small>Manter os aportes alinhados às metas</small></span></label>
+              </div>
+              <div class="habit-progress"><span id="habit-progress-label">0 de 4 hábitos concluídos</span><div class="progress-track"><span id="habit-progress"></span></div></div>
+            </div>
           </div>
         </div>
       </section>
