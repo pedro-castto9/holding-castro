@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-          local-dir: ./
+          local-dir: ./HOLDING CASTRO/
           server-dir: htdocs/
           exclude: |
             **/.git*
